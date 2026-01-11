@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rep Circle Prototype</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <!-- SETUP -->
+    <section id="setup-screen" class="screen active">
+      <h1>Start a Conversation</h1>
+
+      <form id="setup-form">
+        <div class="field">
+          <label for="personA">Person A name</label>
+          <input id="personA" name="personA" required />
+        </div>
+
+        <div class="field">
+          <label for="personB">Person B name</label>
+          <input id="personB" name="personB" required />
+        </div>
+
+        <div class="field">
+          <label for="topic">Topic word/phrase</label>
+          <input id="topic" name="topic" placeholder="e.g. Feeling left out" required />
+        </div>
+
+        <button type="submit">Continue</button>
+      </form>
+    </section>
+
+    <!-- CIRCLE + DIALOGUE -->
+    <section id="circle-screen" class="screen">
+      <header class="circle-header">
+        <h2 id="session-title"></h2>
+        <p id="round-label"></p>
+      </header>
+
+      <div class="circle-wrapper">
+        <div id="repA" class="rep">
+          <div class="rep-name" id="repA-name"></div>
+          <div class="rep-role">Rep A</div>
+        </div>
+
+        <div class="center-circle" id="topic-circle">
+          <span id="topic-label"></span>
+          <div class="orbit">
+            <div class="satellite"></div>
+          </div>
+        </div>
+
+        <div id="repB" class="rep">
+          <div class="rep-name" id="repB-name"></div>
+          <div class="rep-role">Rep B</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="start-btn" type="button">Start</button>
+        <button id="pause-btn" type="button">Pause</button>
+        <button id="stop-btn" type="button">Stop</button>
+      </div>
+
+      <section class="prompt-area">
+        <div id="prompt-text"></div>
+        <form id="message-form">
+          <textarea id="message-input" rows="3" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+      <section class="log-area">
+        <h3>Conversation</h3>
+        <div id="log"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
