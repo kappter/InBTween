@@ -16,4 +16,5 @@
 
 .active {
   stroke-width: 4;
+  stroke: #000;
 }
