@@ -14,5 +14,13 @@ sessionState.personas = [
   { id: "PB", name: "Historian B", type: "persona", isActive: false }
 ];
 
+setTimeout(() => {
+  sessionState.personas.forEach(p => p.isActive = false);
+  sessionState.participants[0].isActive = true;
+
+  renderCircle(sessionState);
+}, 3000);
+
+
 // Initial render
 renderCircle(sessionState);
