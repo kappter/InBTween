@@ -1,5 +1,7 @@
 export function renderCircle(state) {
   const svg = document.getElementById("circleCanvas");
+  svg.innerHTML = "";
+
   const center = { x: 300, y: 300 };
   const radius = 200;
 
